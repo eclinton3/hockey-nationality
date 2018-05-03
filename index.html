@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.css">
+	<link rel="stylesheet" href="styles.css">
+	<title>Red Wing Nationalities</title>
+
+</head>
+
+<body>
+
+
+	<div class="box">
+
+		<h1 class="title is-2">Detroit Red Wings Nationalities</h1>
+
+		<div id="root" class="columns">
+
+			<ul>
+
+				<li v-for="p in players">
+					<div class="column"@click="p.selected = !p.selected">{{p.name}}</div>
+					<div class="column is-half"><img :src="p.flag" v-show="p.selected"></div>
+				</li>
+
+			</ul>
+
+			
+		</div>
+
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+	<script>
+
+		var app = new Vue({
+
+			el: '#root',
+
+			data: {
+
+				players: [
+					{
+						name: 'Justin Abdelkader',
+						flag: '/flags/usa.png',
+						selected: false
+					},
+					{
+						name: 'Andreas Athanasiou',
+						flag: '/flags/canada.png',
+						selected: false
+					},
+					{
+						name: 'Tyler Bertuzzi',
+						flag: '/flags/canada.png',
+						selected: false
+					},
+					{
+						name: 'David Booth',
+						flag: '/flags/usa.png',
+						selected: false
+					},
+					{
+						name: 'Jared Coreau',
+						flag: '/flags/canada.png',
+						selected: false
+					},
+					{
+						name: 'Trevor Daley',
+						flag: '/flags/canada.png',
+						selected: false
+					},
+					{
+						name: 'Danny DeKeyser',
+						flag: '/flags/usa.png',
+						selected: false
+					},
+					{
+						name: 'Jonathan Ericsson',
+						flag: '/flags/sweden.png',
+						selected: false
+					},
+					{
+						name: 'Martin Frk',
+						flag: '/flags/czech.png',
+						selected: false
+					},
+					{
+						name: 'Luke Glendening',
+						flag: '/flags/usa.png',
+						selected: false
+					},
+					{
+						name: 'Mike Green',
+						flag: '/flags/canada.png',
+						selected: false
+					},
+					{
+						name: 'Darren Helm',
+						flag: '/flags/canada.png',
+						selected: false
+					},
+					{
+						name: 'Jimmy Howard',
+						flag: '/flags/usa.png',
+						selected: false
+					},
+					{
+						name: 'Nick Jensen',
+						flag: '/flags/usa.png',
+						selected: false
+					},
+					{
+						name: 'Niklas Kronwall',
+						flag: '/flags/sweden.png',
+						selected: false
+					},
+					{
+						name: 'Dylan Larkin',
+						flag: '/flags/usa.png',
+						selected: false
+					},
+					{
+						name: 'Anthony Mantha',
+						flag: '/flags/canada.png',
+						selected: false
+					},
+					{
+						name: 'Frans Nielsen',
+						flag: '/flags/denmark.png',
+						selected: false
+					},
+					{
+						name: 'Gustav Nyquist',
+						flag: '/flags/sweden.png',
+						selected: false
+					},
+					{
+						name: 'Xavier Ouellet',
+						flag: '/flags/france.png',
+						selected: false
+					},
+					{
+						name: 'Evgeny Svechnikov',
+						flag: '/flags/russia.png',
+						selected: false
+					},
+					{
+						name: 'Luke Witkowski',
+						flag: '/flags/usa.png',
+						selected: false
+					},
+					{
+						name: 'Henrik Zetterberg',
+						flag: '/flags/sweden.png',
+						selected: false
+					}
+				]
+
+			},
+
+		})
+
+	</script>
+
+</body>
+
+</html>
+ 
